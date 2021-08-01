@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Page</title>
+    <style>
+        
+
+
+        #card {
+            margin-top: 10px;
+            margin-left: 10px;
+            background: white;
+            display: inline-block;
+            border-radius: 10px;
+            height: 270px;
+            width: 500px;
+        }
+
+
+        input {
+            font-size: 20px;
+
+        }
+
+        label {
+            font-size: 30px;
+            font-weight: 600;
+            margin-left: 30px;
+            color: black;
+        }
+
+        h2 {
+            font-size: 30px;
+            margin-left: 30px;
+            color: black;
+        }
+
+        
+
+        #btn {
+            margin-top: 30px;
+            font-size: 30px;
+            margin-left: 35px;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+        
+
+        <form action="/employees/<%= employee._id %>" method="POST" validate>
+
+            <label for="username">Username: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="text" name="username" id="username" value="<%= employee.username%>">
+
+            <br><br>
+
+            <label for="designation">Designation: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            
+            <input type="text" name="designation" id="designation" value="<%= employee.designation%>">
+            
+            <br><br>
+
+            <label for="department">Department: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <!-- <input type="text" name="department" id="department" value="<%= employee.department%>"> -->
+            <select name="department" id="department">
+                <option value="CEO">CEO</option>
+                <option value="Tech Support">Tech Support</option>
+                <option value="Tech">Tech</option>
+                <option value="BUSINESS AND SALES">Business and Sales</option>
+            </select>
+            
+            <br><br>
+
+            <label for="manager">Manager: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="text" name="manager" id="username" value="<%= employee.manager%>">
+            
+            <br><br>
+
+            
+
+            <input type="submit" value="Edit Now" id="btn">
+
+        </form>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
